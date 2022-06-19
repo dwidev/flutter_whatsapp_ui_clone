@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:whatsapp_ui_clone/page/panggilan_view.dart';
-import 'package:whatsapp_ui_clone/page/status_view.dart';
 
 import '../constant/colors.dart';
 import '../widget/camera_tab_widget.dart';
 import '../widget/text_tab_widget.dart';
 import 'chat_view.dart';
+import 'panggilan_view.dart';
+import 'status_view.dart';
 
 const labelPaddingTab = 10.0;
 
