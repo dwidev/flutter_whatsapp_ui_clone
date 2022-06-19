@@ -97,4 +97,28 @@ final _chatListDummy = [
     isRead: false,
     countUnRead: 1,
   ),
+  ChatModel(
+    profile: flutter,
+    name: "Flutter Group Anjay",
+    message: "#ASK izin beratanya para suhu, gmana caranya jadi keren",
+    date: "13.30",
+    isRead: false,
+    countUnRead: 1,
+  ),
+  ChatModel(
+    profile: me,
+    name: "Dwi fahmi",
+    message: "Clone ui whatsapp using flutter",
+    date: "Kemarin",
+    isRead: false,
+    countUnRead: 1,
+  ),
+  ChatModel(
+    profile: me,
+    name: "Dwi fahmi",
+    message: "Clone ui whatsapp using flutter",
+    date: "Kemarin",
+    isRead: false,
+    countUnRead: 1,
+  ),
 ];

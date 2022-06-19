@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:whatsapp_ui_clone/page/panggilan_view.dart';
+import 'package:whatsapp_ui_clone/page/status_view.dart';
 
 import '../constant/colors.dart';
 import '../widget/camera_tab_widget.dart';
@@ -35,6 +37,12 @@ class _HomePageState extends State<HomePage>
           _currentIndex = _tabController.index;
         });
       });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
   }
 
   @override
@@ -92,8 +100,8 @@ class _HomePageState extends State<HomePage>
         children: const [
           Center(child: Text("Halaman kamera akan segera datang")),
           ChatView(),
-          Center(child: Text("Halaman status akan segera datang")),
-          Center(child: Text("Halaman panggilan akan segera datang")),
+          StatusView(),
+          PanggilanView(),
         ],
       ),
     );

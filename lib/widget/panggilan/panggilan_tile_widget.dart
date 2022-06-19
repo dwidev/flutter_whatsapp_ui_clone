@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../constant/colors.dart';
-import '../../page/chat_view.dart';
-import '../badge_chat_widget.dart';
+import '../../constant/image.dart';
 
-class ChatTileWidget extends StatelessWidget {
-  const ChatTileWidget({
+class PanggilanTileWidget extends StatelessWidget {
+  const PanggilanTileWidget({
     Key? key,
-    required this.data,
   }) : super(key: key);
-
-  final ChatModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +23,9 @@ class ChatTileWidget extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 28,
-                backgroundImage: AssetImage(data.profile),
+                backgroundImage: AssetImage(me),
               ),
               const SizedBox(width: 15),
               Expanded(
@@ -37,40 +33,33 @@ class ChatTileWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      data.name,
+                      'Fahmi Dwi Syahputra',
                       style: textStyle.headline2?.copyWith(color: Colors.white),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
                     const SizedBox(height: 5),
-                    Text(
-                      data.message,
-                      style: textStyle.bodyText1,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.call_made,
+                          size: 18,
+                          color: Colors.green,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "19 Jun 22.10",
+                          style: textStyle.bodyText1,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
               const SizedBox(width: 5),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    data.date,
-                    style: textStyle.bodyText1?.copyWith(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 13,
-                      color: greenDark,
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  BadgeChatWidget(
-                    isActive: true,
-                    countUnRead: data.countUnRead,
-                  ),
-                ],
-              )
+              const Icon(Icons.phone, color: greenDark),
             ],
           ),
         ),
